@@ -130,3 +130,95 @@ WHERE condition;
 - `WHERE` filters the records to be updated.
 - Without `WHERE`, all rows are affected.
 - Multiple columns can be updated in one statement.
+
+
+
+# DELETE Command
+
+## Definition
+- `DELETE` is a **DML (Data Manipulation Language)** command.
+- It is used to **remove existing records (rows) from an existing table**.
+- It removes the data stored in rows but does not remove the table structure.
+- It can delete specific rows using conditions or delete all rows from a table.
+
+---
+
+## Syntax
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
+
+---
+
+## Important Points
+
+- The `DELETE` command is used to remove records from a table.
+- The `WHERE` clause is used to specify which rows should be deleted.
+- If the `WHERE` clause is provided, only the rows satisfying the condition will be deleted.
+- If the `WHERE` clause is omitted, all rows in the table will be deleted.
+- `DELETE` does not remove the table structure; only the data is removed.
+- Multiple rows can be deleted using a single `DELETE` statement if they satisfy the given condition.
+- If no rows match the `WHERE` condition, no rows will be deleted.
+- `DELETE` can remove duplicate records if they satisfy the specified condition.
+
+---
+
+## DELETE With WHERE Clause
+
+- The `WHERE` clause is used to delete specific records from a table.
+- It helps prevent unwanted deletion of all records.
+
+### Syntax
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
+
+---
+
+## DELETE Without WHERE Clause
+
+- When the `WHERE` clause is not used, all rows from the table will be deleted.
+- The table structure remains unchanged.
+
+### Syntax
+
+```sql
+DELETE FROM table_name;
+```
+
+---
+
+## Difference Between DELETE and DROP
+
+| DELETE | DROP |
+|---|---|
+| Removes data from rows | Removes entire table |
+| Table structure remains | Table structure is deleted |
+| DML command | DDL command |
+
+---
+
+## Difference Between DELETE and TRUNCATE
+
+| DELETE | TRUNCATE |
+|---|---|
+| Can delete specific rows or all rows | Deletes all rows only |
+| Supports WHERE clause | Does not support WHERE clause |
+| DML command | DDL command |
+| Table structure remains | Table structure remains |
+
+---
+
+## Key Points to Remember
+
+- `DELETE` belongs to **DML**.
+- It removes existing records from a table.
+- It does not delete the table structure.
+- `WHERE` clause controls which rows are deleted.
+- Without `WHERE`, all rows are deleted.
+- It can delete one row or multiple rows.
+- It cannot be used to remove the entire table.
