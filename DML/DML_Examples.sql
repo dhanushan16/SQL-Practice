@@ -3,26 +3,32 @@
 -- ==========================================
 
 -- Example 1: Insert without specifying column names
-INSERT INTO student
+INSERT INTO employee
 VALUES (101, 'Rahul', 20);
+
 
 -- Example 2: Insert into all columns by specifying column names
 INSERT INTO employee (employee_id, name, salary)
 VALUES (101, 'Rahul', 50000);
 
+
 -- Example 3: Insert into selected columns
 INSERT INTO employee (employee_id, name)
 VALUES (102, 'Kiran');
+
 
 -- Example 4: Insert values in a different column order
 INSERT INTO employee (salary, employee_id, name)
 VALUES (60000, 103, 'Anjali');
 
+
 -- Example 5: Insert a NULL value
 INSERT INTO employee (employee_id, name, salary)
 VALUES (104, 'Ramesh', NULL);
 
+
 -- Example 6: Insert duplicate records
+-- Works only when constraints like PRIMARY KEY or UNIQUE are not present
 INSERT INTO employee (employee_id, name, salary)
 VALUES (105, 'Priya', 45000);
 
@@ -83,6 +89,14 @@ WHERE employee_id = 101
 AND name = 'Rahul';
 
 
+-- Example 8: Update when no matching row exists
+-- No rows will be updated if employee_id 999 does not exist
+UPDATE employee
+SET salary = 70000
+WHERE employee_id = 999;
+
+
+
 -- ==========================================
 -- DELETE Command Examples
 -- ==========================================
@@ -114,5 +128,11 @@ AND name = 'Rahul';
 
 
 -- Example 5: Delete all rows from a table
--- (Use carefully because it removes all records)
+-- WHERE clause is omitted, so all rows will be deleted
 DELETE FROM employee;
+
+
+-- Example 6: Delete when no matching row exists
+-- No rows will be deleted if employee_id 999 does not exist
+DELETE FROM employee
+WHERE employee_id = 999;
