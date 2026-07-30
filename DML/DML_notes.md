@@ -46,9 +46,10 @@ VALUES (value1, value2, value3);
 
 - String values must be enclosed in **single quotes (`' '`)**.
 - Numeric values are written **without quotes**.
-- `NULL` can be inserted if the column allows `NULL` values.
+- `NULL` can be inserted if the column allows NULL values and does not have a `NOT NULL` constraint.
 - Duplicate records can be inserted unless constraints like **PRIMARY KEY** or **UNIQUE** are present.
 
+---
 
 # UPDATE Command
 
@@ -117,7 +118,7 @@ WHERE condition;
 ## NULL Values
 
 - `UPDATE` can be used to set column values as `NULL`.
-- A column can store `NULL` values only if it allows NULL values.
+- A column can be updated with `NULL` only if it allows NULL values and does not have a `NOT NULL` constraint.
 
 ---
 
@@ -131,7 +132,7 @@ WHERE condition;
 - Without `WHERE`, all rows are affected.
 - Multiple columns can be updated in one statement.
 
-
+---
 
 # DELETE Command
 
@@ -139,7 +140,7 @@ WHERE condition;
 - `DELETE` is a **DML (Data Manipulation Language)** command.
 - It is used to **remove existing records (rows) from an existing table**.
 - It removes the data stored in rows but does not remove the table structure.
-- It can delete specific rows using conditions or delete all rows from a table.
+- It can delete specific rows using the `WHERE` clause or delete all rows by omitting the `WHERE` clause.
 
 ---
 
@@ -210,6 +211,7 @@ DELETE FROM table_name;
 | Supports WHERE clause | Does not support WHERE clause |
 | DML command | DDL command |
 | Table structure remains | Table structure remains |
+| Can be rolled back before COMMIT | Generally cannot be rolled back after execution |
 
 ---
 
