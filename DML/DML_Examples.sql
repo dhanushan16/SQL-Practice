@@ -81,3 +81,38 @@ UPDATE employee
 SET salary = 60000
 WHERE employee_id = 101
 AND name = 'Rahul';
+
+
+-- ==========================================
+-- DELETE Command Examples
+-- ==========================================
+
+-- Syntax:
+DELETE FROM table_name
+WHERE condition;
+
+
+-- Example 1: Delete a specific row using WHERE clause
+DELETE FROM employee
+WHERE employee_id = 101;
+
+
+-- Example 2: Delete rows based on a condition
+DELETE FROM employee
+WHERE name = 'Rahul';
+
+
+-- Example 3: Delete multiple rows using a condition
+DELETE FROM employee
+WHERE salary > 50000;
+
+
+-- Example 4: Delete rows using multiple conditions
+DELETE FROM employee
+WHERE employee_id = 101
+AND name = 'Rahul';
+
+
+-- Example 5: Delete all rows from a table
+-- (Use carefully because it removes all records)
+DELETE FROM employee;
