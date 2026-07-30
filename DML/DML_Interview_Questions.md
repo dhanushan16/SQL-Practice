@@ -228,3 +228,135 @@ The WHERE clause determines which rows are updated. If it is missing or incorrec
 
 **Answer:**
 Yes. Multiple UPDATE statements can be executed one after another, and each statement updates the rows that satisfy its own condition.
+
+
+# DELETE Command
+
+### 1. What is the DELETE command?
+
+**Answer:**
+The `DELETE` command is a DML (Data Manipulation Language) command used to remove existing records (rows) from an existing table.
+
+---
+
+### 2. Does DELETE remove the entire table structure?
+
+**Answer:**
+No. The `DELETE` command only removes data from rows. The table structure, columns, and definition remain unchanged.
+
+---
+
+### 3. Can DELETE be used to delete specific rows?
+
+**Answer:**
+Yes. Specific rows can be deleted by using the `WHERE` clause with a condition.
+
+---
+
+### 4. What happens if we execute DELETE without a WHERE clause?
+
+**Answer:**
+If the `WHERE` clause is omitted, all rows in the table will be deleted. The table structure will remain unchanged.
+
+---
+
+### 5. What is the purpose of the WHERE clause in DELETE?
+
+**Answer:**
+The `WHERE` clause is used to specify the condition and identify which rows should be deleted.
+
+---
+
+### 6. Can we delete multiple rows using a single DELETE statement?
+
+**Answer:**
+Yes. Multiple rows can be deleted using a single DELETE statement if multiple rows satisfy the condition specified in the WHERE clause.
+
+---
+
+### 7. What happens if the WHERE condition does not match any row?
+
+**Answer:**
+No rows will be deleted. The query will execute successfully without modifying any data.
+
+---
+
+### 8. If multiple rows have the same value in the column used in WHERE condition, how many rows will be deleted?
+
+**Answer:**
+All rows that satisfy the condition will be deleted. DELETE removes every matching row, not only the first matching row.
+
+---
+
+### 9. Can DELETE insert new rows into a table?
+
+**Answer:**
+No. DELETE only removes existing records. It cannot insert new records.
+
+---
+
+### 10. What is the difference between DELETE and DROP?
+
+**Answer:**
+
+- `DELETE` removes data from rows of a table.
+- `DROP` removes the entire table including data and structure.
+
+---
+
+### 11. What is the difference between DELETE and TRUNCATE?
+
+**Answer:**
+
+- `DELETE` can remove specific rows using the WHERE clause.
+- `TRUNCATE` removes all rows and does not support the WHERE clause.
+- `DELETE` is a DML command, whereas `TRUNCATE` is a DDL command.
+
+---
+
+### 12. Can DELETE remove duplicate records?
+
+**Answer:**
+
+Yes. If duplicate records satisfy the WHERE condition, all matching duplicate records will be deleted.
+
+---
+
+### 13. What happens when DELETE is executed on an empty table?
+
+**Answer:**
+
+No rows will be deleted because there are no records available in the table. The query will execute successfully.
+
+---
+
+### 14. Can we delete rows based on multiple conditions?
+
+**Answer:**
+
+Yes. Multiple conditions can be used with operators like `AND` or `OR` to delete required rows.
+
+---
+
+### 15. What is the difference between DELETE with WHERE clause and DELETE without WHERE clause?
+
+**Answer:**
+
+- DELETE with WHERE clause removes only rows that satisfy the condition.
+- DELETE without WHERE clause removes all rows from the table.
+
+---
+
+### 16. Does DELETE remove the table permanently?
+
+**Answer:**
+
+No. DELETE removes only the data stored in the table. The table remains available for future operations.
+
+---
+
+### 17. Which command is used to remove all records from a table while keeping the structure?
+
+**Answer:**
+
+`DELETE` without a WHERE clause or `TRUNCATE` can remove all records while keeping the table structure.
