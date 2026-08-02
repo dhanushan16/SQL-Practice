@@ -1526,7 +1526,7 @@ Therefore, if a specific order is required, ORDER BY should always be used.
 
 ---
 
-# Final Interview Revision Points
+# Note:
 
 1. DQL stands for Data Query Language.
 
